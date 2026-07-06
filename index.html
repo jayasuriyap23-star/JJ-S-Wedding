@@ -3,609 +3,68 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Elena & Julian — September 12, 2026</title>
+<title>P Jayasuriya & S Janani — A Sacred Union | Wedding Invitation</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Cormorant+SC:wght@500;600&family=Kalam:wght@400;700&family=Noto+Serif+Devanagari:wght@500;700&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --ivory:#F8F4EC;
-    --ivory-deep:#F1EBDD;
-    --deep-green:#2C3B2E;
-    --sage:#8B9A82;
-    --gold:#B8935B;
-    --gold-soft:#D9BE8F;
-    --charcoal:#3A342C;
-    --white:#FFFFFF;
-  }
-
-  *{margin:0;padding:0;box-sizing:border-box;}
-
-  html{scroll-behavior:smooth;}
-
-  body{
-    background:var(--ivory);
-    color:var(--charcoal);
-    font-family:'Jost', sans-serif;
-    font-weight:300;
-    overflow-x:hidden;
-  }
-
-  h1,h2,.serif{
-    font-family:'Cormorant Garamond', serif;
-    font-weight:400;
-    color:var(--deep-green);
-  }
-
-  .eyebrow{
-    font-family:'Jost', sans-serif;
-    font-size:0.72rem;
-    letter-spacing:0.32em;
-    text-transform:uppercase;
-    color:var(--gold);
-    font-weight:500;
-  }
-
-  a{color:inherit;}
-
-  /* ---------- Divider ---------- */
-  .divider{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:14px;
-    margin:28px auto;
-    width:min(360px, 70%);
-  }
-  .divider .line{
-    flex:1;
-    height:1px;
-    background:linear-gradient(90deg, transparent, var(--gold), transparent);
-  }
-  .divider svg{ flex-shrink:0; }
-
-  /* ---------- Hero ---------- */
-  .hero{
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:80px 24px 60px;
-    position:relative;
-  }
-
-  .wreath{
-    width:180px;
-    height:auto;
-    margin-bottom:18px;
-    opacity:0;
-    animation:fadeDown 1.4s ease forwards 0.2s;
-  }
-
-  .hero .eyebrow{
-    opacity:0;
-    animation:fadeUp 1s ease forwards 0.6s;
-  }
-
-  .hero h1{
-    font-size:clamp(3rem, 9vw, 6.2rem);
-    line-height:1.02;
-    margin:10px 0 6px;
-    letter-spacing:0.01em;
-    opacity:0;
-    animation:fadeUp 1.1s ease forwards 0.85s;
-  }
-
-  .hero h1 em{
-    font-style:italic;
-    color:var(--gold);
-    font-weight:300;
-    padding:0 0.15em;
-  }
-
-  .hero .subtitle{
-    font-family:'Cormorant Garamond', serif;
-    font-style:italic;
-    font-size:1.3rem;
-    color:var(--sage);
-    opacity:0;
-    animation:fadeUp 1.1s ease forwards 1.1s;
-  }
-
-  .hero .date-line{
-    margin-top:34px;
-    font-size:1.05rem;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    color:var(--deep-green);
-    opacity:0;
-    animation:fadeUp 1.1s ease forwards 1.35s;
-  }
-
-  .hero .location-line{
-    margin-top:8px;
-    font-size:0.95rem;
-    color:var(--charcoal);
-    opacity:0.8;
-    opacity:0;
-    animation:fadeUp 1.1s ease forwards 1.5s;
-  }
-
-  /* Countdown */
-  .countdown{
-    display:flex;
-    gap:28px;
-    margin-top:46px;
-    opacity:0;
-    animation:fadeUp 1.1s ease forwards 1.7s;
-  }
-  .countdown .unit{
-    text-align:center;
-    min-width:64px;
-  }
-  .countdown .num{
-    font-family:'Cormorant Garamond', serif;
-    font-size:2.4rem;
-    color:var(--deep-green);
-    display:block;
-  }
-  .countdown .label{
-    font-size:0.62rem;
-    letter-spacing:0.18em;
-    text-transform:uppercase;
-    color:var(--gold);
-  }
-
-  @keyframes fadeUp{ from{opacity:0; transform:translateY(18px);} to{opacity:1; transform:translateY(0);} }
-  @keyframes fadeDown{ from{opacity:0; transform:translateY(-14px);} to{opacity:1; transform:translateY(0);} }
-
-  /* ---------- Reveal on scroll ---------- */
-  .reveal{
-    opacity:0;
-    transform:translateY(30px);
-    transition:opacity 0.9s ease, transform 0.9s ease;
-  }
-  .reveal.visible{
-    opacity:1;
-    transform:translateY(0);
-  }
-
-  /* ---------- Section shell ---------- */
-  section{
-    padding:110px 24px;
-    max-width:1000px;
-    margin:0 auto;
-    text-align:center;
-  }
-
-  section h2{
-    font-size:clamp(2.1rem, 4vw, 2.9rem);
-    margin-top:6px;
-  }
-
-  section > .eyebrow{ display:block; }
-
-  .section-intro{
-    max-width:520px;
-    margin:22px auto 0;
-    font-size:1rem;
-    line-height:1.85;
-    color:var(--charcoal);
-    opacity:0.85;
-  }
-
-  /* ---------- Story band ---------- */
-  .story-band{
-    background:var(--deep-green);
-    color:var(--ivory);
-  }
-  .story-band .eyebrow{ color:var(--gold-soft); }
-  .story-band h2{ color:var(--ivory); }
-  .story-band .section-intro{ color:var(--ivory); opacity:0.82; }
-  .story-band .divider .line{ background:linear-gradient(90deg, transparent, var(--gold-soft), transparent); }
-
-  /* ---------- Schedule ---------- */
-  .schedule{
-    margin-top:56px;
-    display:flex;
-    flex-direction:column;
-    max-width:640px;
-    margin-left:auto;
-    margin-right:auto;
-    text-align:left;
-  }
-  .schedule-item{
-    display:grid;
-    grid-template-columns:120px 1px 1fr;
-    gap:28px;
-    padding:26px 0;
-    border-bottom:1px solid rgba(184,147,91,0.25);
-  }
-  .schedule-item:last-child{ border-bottom:none; }
-  .schedule-item .time{
-    font-family:'Cormorant Garamond', serif;
-    font-size:1.5rem;
-    color:var(--gold);
-    padding-top:2px;
-  }
-  .schedule-item .rule{
-    background:var(--gold-soft);
-    opacity:0.5;
-  }
-  .schedule-item .event h3{
-    font-family:'Cormorant Garamond', serif;
-    font-weight:500;
-    font-size:1.35rem;
-    color:var(--deep-green);
-    margin-bottom:6px;
-  }
-  .schedule-item .event p{
-    font-size:0.92rem;
-    opacity:0.75;
-    line-height:1.6;
-  }
-
-  /* ---------- Details cards ---------- */
-  .cards{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:28px;
-    margin-top:56px;
-  }
-  .card{
-    background:var(--white);
-    border:1px solid rgba(184,147,91,0.3);
-    padding:44px 30px;
-    border-radius:2px;
-  }
-  .card .cardicon{ margin-bottom:16px; }
-  .card h3{
-    font-family:'Cormorant Garamond', serif;
-    font-size:1.5rem;
-    color:var(--deep-green);
-    margin-bottom:10px;
-  }
-  .card p{ font-size:0.92rem; line-height:1.7; opacity:0.8; }
-  .card a.map-link{
-    display:inline-block;
-    margin-top:16px;
-    font-size:0.78rem;
-    letter-spacing:0.12em;
-    text-transform:uppercase;
-    color:var(--gold);
-    border-bottom:1px solid var(--gold);
-    padding-bottom:2px;
-  }
-
-  /* ---------- RSVP ---------- */
-  .rsvp{ background:var(--ivory-deep); }
-  form.rsvp-form{
-    margin-top:50px;
-    max-width:520px;
-    margin-left:auto;
-    margin-right:auto;
-    text-align:left;
-    display:flex;
-    flex-direction:column;
-    gap:22px;
-  }
-  .field{ display:flex; flex-direction:column; gap:8px; }
-  .field label{
-    font-size:0.72rem;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    color:var(--deep-green);
-  }
-  .field input[type=text], .field input[type=number], .field select, .field textarea{
-    font-family:'Jost', sans-serif;
-    font-size:0.98rem;
-    padding:12px 4px;
-    background:transparent;
-    border:none;
-    border-bottom:1px solid rgba(58,52,44,0.3);
-    color:var(--charcoal);
-    outline:none;
-    transition:border-color 0.3s ease;
-  }
-  .field input:focus, .field select:focus, .field textarea:focus{
-    border-color:var(--gold);
-  }
-  .row2{ display:grid; grid-template-columns:1fr 1fr; gap:22px; }
-
-  .attend-toggle{
-    display:flex;
-    gap:14px;
-  }
-  .attend-toggle button{
-    flex:1;
-    padding:14px;
-    font-family:'Jost', sans-serif;
-    font-size:0.85rem;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    background:transparent;
-    border:1px solid rgba(58,52,44,0.3);
-    color:var(--charcoal);
-    cursor:pointer;
-    transition:all 0.25s ease;
-  }
-  .attend-toggle button.active{
-    background:var(--deep-green);
-    border-color:var(--deep-green);
-    color:var(--ivory);
-  }
-
-  .submit-btn{
-    margin-top:10px;
-    padding:16px;
-    background:var(--gold);
-    color:var(--white);
-    border:none;
-    font-family:'Jost', sans-serif;
-    font-size:0.85rem;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    cursor:pointer;
-    transition:background 0.3s ease;
-  }
-  .submit-btn:hover{ background:var(--deep-green); }
-
-  .confirm-msg{
-    display:none;
-    margin-top:22px;
-    text-align:center;
-    font-family:'Cormorant Garamond', serif;
-    font-style:italic;
-    font-size:1.2rem;
-    color:var(--deep-green);
-  }
-  .confirm-msg.show{ display:block; animation:fadeUp 0.7s ease; }
-
-  /* ---------- Footer ---------- */
-  footer{
-    padding:70px 24px 46px;
-    text-align:center;
-    background:var(--deep-green);
-    color:var(--ivory);
-  }
-  footer .monogram-small{ width:60px; margin-bottom:18px; opacity:0.9; }
-  footer .hashtag{
-    font-family:'Cormorant Garamond', serif;
-    font-style:italic;
-    font-size:1.3rem;
-    color:var(--gold-soft);
-  }
-  footer .thanks{
-    margin-top:14px;
-    font-size:0.82rem;
-    opacity:0.65;
-    letter-spacing:0.04em;
-  }
-
-  @media(max-width:640px){
-    .cards{ grid-template-columns:1fr; }
-    .row2{ grid-template-columns:1fr; }
-    .schedule-item{ grid-template-columns:80px 1px 1fr; gap:16px; }
-    .countdown{ gap:16px; }
-    .countdown .unit{ min-width:52px; }
-    section{ padding:80px 20px; }
-  }
-
-  :focus-visible{ outline:2px solid var(--gold); outline-offset:3px; }
-
-  @media (prefers-reduced-motion: reduce){
-    *{ animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; }
-  }
+:root{
+  --maroon:#5c0f1a; --maroon-deep:#3a0910; --red:#8e1f36; --gold:#cf9f3f;
+  --gold-light:#f2ce80; --gold-pale:#f7e6b8; --ivory:#fbf3e2; --cream:#f3e6c6;
+  --bronze:#8a5a2b; --ink:#2a0a10;
+  --font-display:'Cinzel', serif; --font-body:'Cormorant Garamond', serif;
+  --font-script:'Kalam', cursive; --font-dev:'Noto Serif Devanagari', serif;
+  --font-label:'Cormorant SC', serif;
+}
+body {
+  margin:0; font-family:var(--font-body); background:var(--ivory); color:var(--ink);
+  background-image: radial-gradient(circle at 50% 50%, rgba(207, 159, 63, 0.05) 0%, transparent 70%), url('https://www.transparenttextures.com/patterns/mandala.png');
+}
+.deity-bg {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; 
+  opacity: 0.06; pointer-events: none;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Ganesha_statue.jpg/640px-Ganesha_statue.jpg') center/cover no-repeat;
+}
+section { padding: 4rem 1.25rem; max-width: 1100px; margin: 0 auto; }
+h1, h2 { font-family: var(--font-display); color: var(--maroon-deep); }
+.gold-btn, .cal-btn {
+  display: inline-flex; align-items: center; gap: .6rem;
+  font-family: var(--font-label); letter-spacing: .14em; text-transform: uppercase;
+  font-size: .85rem; padding: .95em 2em; border-radius: 999px; cursor: pointer;
+  text-decoration: none; transition: .25s ease;
+}
+.gold-btn { color: var(--ink); background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--bronze)); }
+.cal-btn { color: var(--maroon-deep); border: 1.5px solid var(--gold); background: transparent; }
+.cal-btn:hover { background: var(--gold); color: var(--ink); }
+.rsvp-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin: 2rem 0; }
 </style>
 </head>
 <body>
 
-<!-- ===================== HERO ===================== -->
-<section class="hero">
-  <svg class="wreath" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g stroke="#B8935B" stroke-width="1.4" stroke-linecap="round">
-      <!-- left laurel -->
-      <path d="M100 170 C 60 165, 35 140, 30 100 C 27 70, 40 45, 60 30" fill="none"/>
-      <path d="M55 150 C 48 148, 42 142, 40 135" fill="none"/>
-      <path d="M42 128 C 35 124, 30 117, 28 109" fill="none"/>
-      <path d="M32 100 C 25 96, 20 89, 18 81" fill="none"/>
-      <path d="M35 72 C 28 68, 24 61, 22 53" fill="none"/>
-      <path d="M45 50 C 38 47, 33 41, 30 34" fill="none"/>
-      <!-- right laurel -->
-      <path d="M100 170 C 140 165, 165 140, 170 100 C 173 70, 160 45, 140 30" fill="none"/>
-      <path d="M145 150 C 152 148, 158 142, 160 135" fill="none"/>
-      <path d="M158 128 C 165 124, 170 117, 172 109" fill="none"/>
-      <path d="M168 100 C 175 96, 180 89, 182 81" fill="none"/>
-      <path d="M165 72 C 172 68, 176 61, 178 53" fill="none"/>
-      <path d="M155 50 C 162 47, 167 41, 170 34" fill="none"/>
-    </g>
-    <text x="100" y="108" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="42" fill="#2C3B2E" font-style="italic">E&amp;J</text>
-  </svg>
+<div class="deity-bg"></div>
 
-  <span class="eyebrow">Together with their families</span>
-  <h1>Elena <em>&amp;</em> Julian</h1>
-  <p class="subtitle">request the pleasure of your company</p>
-  <p class="date-line">Saturday, September 12th, 2026</p>
-  <p class="location-line">The Willowmere Estate · Hudson Valley, New York</p>
+<main>
+  <section id="welcome">
+    <div style="text-align:center;">
+      <div style="font-family:var(--font-dev); font-size:2.5rem; color:var(--maroon-deep);">॥ श्री गणेशाय नमः ॥</div>
+      <h1>P Jayasuriya & S Janani</h1>
+      <p>We lovingly invite you to our wedding.</p>
+    </div>
+  </section>
 
-  <div class="countdown" id="countdown">
-    <div class="unit"><span class="num" id="cd-days">00</span><span class="label">Days</span></div>
-    <div class="unit"><span class="num" id="cd-hours">00</span><span class="label">Hours</span></div>
-    <div class="unit"><span class="num" id="cd-mins">00</span><span class="label">Mins</span></div>
-    <div class="unit"><span class="num" id="cd-secs">00</span><span class="label">Secs</span></div>
-  </div>
-</section>
-
-<!-- ===================== STORY / WELCOME ===================== -->
-<section class="story-band reveal">
-  <span class="eyebrow">Our Story</span>
-  <h2>A decade in the making</h2>
-  <p class="section-intro">
-    What began as a chance introduction at a mutual friend's dinner party became ten years of shared kitchens, long drives, and one very patient dog. We can't wait to celebrate the next chapter with the people who mean the most to us.
-  </p>
-  <div class="divider">
-    <div class="line"></div>
-    <svg width="16" height="16" viewBox="0 0 16 16"><path d="M8 0L10 6L16 8L10 10L8 16L6 10L0 8L6 6Z" fill="#D9BE8F"/></svg>
-    <div class="line"></div>
-  </div>
-</section>
-
-<!-- ===================== SCHEDULE ===================== -->
-<section class="reveal">
-  <span class="eyebrow">The Day</span>
-  <h2>Order of Events</h2>
-  <div class="schedule">
-    <div class="schedule-item">
-      <div class="time">4:00 PM</div>
-      <div class="rule"></div>
-      <div class="event">
-        <h3>Ceremony</h3>
-        <p>Rose Garden Lawn · Please be seated by 3:45 PM</p>
+  <section id="rsvp">
+    <div style="text-align:center;">
+      <h2>Kindly Confirm Your Presence</h2>
+      <div class="rsvp-actions">
+        <!-- Add to Calendar Button -->
+        <a class="cal-btn" href="data:text/calendar;charset=utf8,BEGIN:VCALENDAR%0AVERSION:2.0%0APRODID:-//Wedding//Invitation//EN%0ABEGIN:VEVENT%0ASUMMARY:Wedding of Jayasuriya & Janani%0ADTSTART:20261212T051200Z%0ADTEND:20261212T080000Z%0ALOCATION:Chennai, India%0ADESCRIPTION:Join us for the divine wedding ceremony.%0AEND:VEVENT%0AEND:VCALENDAR" download="wedding-invite.ics">
+          📅 Add to Calendar
+        </a>
+        <a class="gold-btn" href="https://forms.gle/your-form-link" target="_blank">RSVP Now</a>
       </div>
     </div>
-    <div class="schedule-item">
-      <div class="time">5:00 PM</div>
-      <div class="rule"></div>
-      <div class="event">
-        <h3>Cocktail Hour</h3>
-        <p>The Orangery · Drinks, hors d'oeuvres, and a string quartet</p>
-      </div>
-    </div>
-    <div class="schedule-item">
-      <div class="time">6:30 PM</div>
-      <div class="rule"></div>
-      <div class="event">
-        <h3>Reception & Dinner</h3>
-        <p>The Barn Hall · Dinner, toasts, and dancing until midnight</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== DETAILS ===================== -->
-<section class="reveal">
-  <span class="eyebrow">Details</span>
-  <h2>Venue & Travel</h2>
-  <div class="cards">
-    <div class="card">
-      <h3>The Willowmere Estate</h3>
-      <p>142 Millbrook Lane, Hudson Valley, NY 12545. Ceremony and reception held on-site, rain or shine, under the estate's restored glasshouse.</p>
-      <a class="map-link" href="#">View on Map →</a>
-    </div>
-    <div class="card">
-      <h3>Staying Overnight</h3>
-      <p>A block of rooms is held at The Millbrook Inn, ten minutes from the venue. Mention "Elena & Julian" when booking to receive the wedding rate.</p>
-      <a class="map-link" href="#">Reserve a Room →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===================== RSVP ===================== -->
-<section class="rsvp reveal">
-  <span class="eyebrow">Kindly Respond</span>
-  <h2>RSVP</h2>
-  <p class="section-intro">We'd be so grateful to hear from you by August 1st, 2026.</p>
-
-  <form class="rsvp-form" id="rsvpForm">
-    <div class="row2">
-      <div class="field">
-        <label for="fname">Full Name</label>
-        <input type="text" id="fname" required placeholder="Jane Doe">
-      </div>
-      <div class="field">
-        <label for="guests">Number in Party</label>
-        <input type="number" id="guests" min="1" max="6" value="1">
-      </div>
-    </div>
-
-    <div class="field">
-      <label>Will you be attending?</label>
-      <div class="attend-toggle">
-        <button type="button" class="attend-btn active" data-val="yes">Joyfully Accept</button>
-        <button type="button" class="attend-btn" data-val="no">Regretfully Decline</button>
-      </div>
-    </div>
-
-    <div class="field">
-      <label for="meal">Meal Preference</label>
-      <select id="meal">
-        <option>Herb-Roasted Chicken</option>
-        <option>Pan-Seared Salmon</option>
-        <option>Wild Mushroom Risotto (Vegetarian)</option>
-      </select>
-    </div>
-
-    <div class="field">
-      <label for="notes">Dietary Restrictions or Notes</label>
-      <textarea id="notes" rows="3" placeholder="Allergies, song requests, well wishes..."></textarea>
-    </div>
-
-    <button type="submit" class="submit-btn">Send RSVP</button>
-    <p class="confirm-msg" id="confirmMsg">Thank you — your reply has been received with love.</p>
-  </form>
-</section>
-
-<!-- ===================== FOOTER ===================== -->
-<footer>
-  <svg class="monogram-small" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="30" cy="30" r="28" stroke="#D9BE8F" stroke-width="1"/>
-    <text x="30" y="38" text-anchor="middle" font-family="Cormorant Garamond, serif" font-size="20" fill="#F8F4EC" font-style="italic">E&amp;J</text>
-  </svg>
-  <p class="hashtag">#ElenaAndJulian2026</p>
-  <p class="thanks">With love and gratitude — we can't wait to celebrate with you.</p>
-</footer>
-
-<script>
-  // Countdown
-  const weddingDate = new Date("2026-09-12T16:00:00");
-  function updateCountdown(){
-    const now = new Date();
-    let diff = weddingDate - now;
-    if(diff < 0) diff = 0;
-    const days = Math.floor(diff / (1000*60*60*24));
-    const hours = Math.floor((diff / (1000*60*60)) % 24);
-    const mins = Math.floor((diff / (1000*60)) % 60);
-    const secs = Math.floor((diff / 1000) % 60);
-    document.getElementById('cd-days').textContent = String(days).padStart(2,'0');
-    document.getElementById('cd-hours').textContent = String(hours).padStart(2,'0');
-    document.getElementById('cd-mins').textContent = String(mins).padStart(2,'0');
-    document.getElementById('cd-secs').textContent = String(secs).padStart(2,'0');
-  }
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
-
-  // Scroll reveal
-  const revealEls = document.querySelectorAll('.reveal');
-  const io = new IntersectionObserver((entries)=>{
-    entries.forEach(entry=>{
-      if(entry.isIntersecting){
-        entry.target.classList.add('visible');
-        io.unobserve(entry.target);
-      }
-    });
-  }, {threshold:0.15});
-  revealEls.forEach(el=>io.observe(el));
-
-  // Attend toggle
-  const attendBtns = document.querySelectorAll('.attend-btn');
-  let attending = 'yes';
-  attendBtns.forEach(btn=>{
-    btn.addEventListener('click', ()=>{
-      attendBtns.forEach(b=>b.classList.remove('active'));
-      btn.classList.add('active');
-      attending = btn.dataset.val;
-    });
-  });
-
-  // Form submit
-  document.getElementById('rsvpForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    document.getElementById('confirmMsg').classList.add('show');
-    this.querySelectorAll('input, select, textarea, button').forEach(el=>el.disabled = true);
-  });
-</script>
+  </section>
+</main>
 
 </body>
 </html>
